@@ -1,0 +1,25 @@
+{
+  "name": "handlebars-helper-eviler-eval",
+  "version": "0.1.0",
+  "description": "A Handlebars helper which evaluates a JavaScript expression and put the result to the block parameter",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "handlebars"
+  ],
+  "author": "recyclebin5385",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-standard": "^12.0.0",
+    "handlebars-helpers": "^0.10.0",
+    "mocha": "^6.1.2",
+    "power-assert": "^1.6.1"
+  }
+}
