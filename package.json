@@ -13,7 +13,7 @@
     "handlebars"
   ],
   "author": "recyclebin5385",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
     "url": "https://github.com/recyclebin5385/handlebars-helper-eval-js.git"
