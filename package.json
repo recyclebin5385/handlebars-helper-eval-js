@@ -19,7 +19,7 @@
     "url": "https://github.com/recyclebin5385/handlebars-helper-eval-js.git"
   },
   "dependencies": {
-    "handlebars": "^3.0.0"
+    "handlebars": "^4.0.0"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
