@@ -53,7 +53,7 @@ describe('standalone', () => {
         rename: {
           eval: 'hoge'
         }
-      })
+      }))
 
       assert.strictEqual('74', hbs.compile('{{#with foo}}{{#hoge "_1 * x + _2 * y + bar" bar ../baz/foo x=@root/bar y=9 as |z|}}{{z}}{{/hoge}}{{/with}}')(root))
     })
