@@ -1,25 +1,38 @@
 {
-  "name": "handlebars-helper-eviler-eval",
+  "name": "handlebars-helper-eval-js",
   "version": "0.1.0",
   "description": "A Handlebars helper which evaluates a JavaScript expression and put the result to the block parameter",
   "main": "dist/index.js",
   "scripts": {
-    "test": "test"
+    "clean": "gulp clean",
+    "build": "gulp",
+    "lint": "gulp lint",
+    "test": "gulp test"
   },
   "keywords": [
     "handlebars"
   ],
   "author": "recyclebin5385",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/recyclebin5385/handlebars-helper-eval-js.git"
+  },
   "dependencies": {
-    "handlebars": "^4.1.1"
+    "handlebars": "^3.0.0"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
-    "gulp-copy": "^4.0.1",
+    "gulp-jsdoc3": "^2.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-mocha": "^6.0.0",
+    "gulp-replace": "^1.0.0",
     "gulp-standard": "^12.0.0",
+    "gulp-util": "^3.0.8",
     "handlebars-helpers": "^0.10.0",
+    "jsdoc": "^3.5.5",
     "mocha": "^6.1.2",
-    "power-assert": "^1.6.1"
+    "rimraf": "^2.6.3",
+    "standard": "^12.0.1"
   }
 }

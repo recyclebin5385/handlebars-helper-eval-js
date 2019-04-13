@@ -1,19 +1,39 @@
+/**
+ * A Handlebars block helper which evaluates a JavaScript code.
+ *
+ * @module @@pkg.name
+ */
+
 'use strict'
 
-function assign (o1, o2) {
-  for (let key in o2) {
-    if (o2.hasOwnProperty(key)) {
-      o1[key] = o2[key]
+/**
+ * Register the helper to Handlebars.
+ *
+ * The return value is identical to options.handlebars.helpers (if specified).
+ *
+ * @param {Object} [options] - The options.
+ * @param {Object} [options.handlebars] - The Handlebars module.
+ * @param {Object} [options.rename] - The hash containig a pair of the default and changed name of the helper.
+ * @param {string} [options.rename.eval] - The changed name of the "eval" helper.
+ * @return {Object} The hash containing a pair of the name of the helper and the helper function.
+ */
+module.exports = function (options) {
+  const assign = function (o1, o2) {
+    for (let key in o2) {
+      if (o2.hasOwnProperty(key)) {
+        o1[key] = o2[key]
+      }
     }
   }
-}
 
-module.exports = function helpers (options) {
   options = options || {}
   const hbs = options.handlebars || require('handlebars')
-  const name = options.name || 'eval'
+  const rename = {
+    eval: 'eval'
+  }
+  assign(rename, options.rename || {})
 
-  hbs.registerHelper(name, function() {
+  hbs.registerHelper(rename['eval'], function () {
     let expression = arguments[0]
     if (expression == null) {
       expression = ''
@@ -42,7 +62,7 @@ module.exports = function helpers (options) {
     }
     args1.push(`return (${expression})`)
     const result = new Function(...args1)(...args2) // eslint-disable-line no-new-func
-    console.log(JSON.stringify(options))
+
     return options.fn(this, {
       data: options.data,
       blockParams: [result]
