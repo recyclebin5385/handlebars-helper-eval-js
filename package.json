@@ -1,6 +1,6 @@
 {
   "name": "handlebars-helper-eval-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Handlebars helper which evaluates a JavaScript expression and put the result to the block parameter",
   "main": "dist/index.js",
   "scripts": {

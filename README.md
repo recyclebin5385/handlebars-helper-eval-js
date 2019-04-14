@@ -104,9 +104,17 @@ replaced with "@root/foo/bar", "@root/baz/foo", "@root/bar", "9" and "@root/bar"
 
 ## History
 
+### version 0.1.1
+
+Released on 2019-4-14
+
+ -  Fix license error in package.json
+
 ### version 0.1.0
 
 Released on 2019-4-13
+
+Unpublished due to error of license information
 
  -  initial release
 
